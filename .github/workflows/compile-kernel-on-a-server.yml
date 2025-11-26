@@ -138,8 +138,8 @@ jobs:
         run: |
           df -hT ${PWD}
           mkdir -p /builder/{kernel,output,ccache}
-          ln -sf /builder/kernel /home/runner/work/_actions/ophub/amlogic-s9xxx-armbian/main/compile-kernel/kernel
-          ln -sf /builder/output /home/runner/work/_actions/ophub/amlogic-s9xxx-armbian/main/compile-kernel/output
+          ln -sf /builder/kernel /home/runner/work/_actions/myaccount3/amlogic-s9xxx-armbian/main/compile-kernel/kernel
+          ln -sf /builder/output /home/runner/work/_actions/myaccount3/amlogic-s9xxx-armbian/main/compile-kernel/output
           sudo rm -rf /root/.ccache
           sudo ln -sf /builder/ccache /root/.ccache
           echo "status=success" >> ${GITHUB_OUTPUT}
