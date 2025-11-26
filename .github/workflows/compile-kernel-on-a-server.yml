@@ -71,6 +71,7 @@ on:
         options:
           - -ophub
           - -yourname
+          - -my
 
 env:
   TZ: Etc/UTC
@@ -168,7 +169,7 @@ jobs:
             kernel-${{ inputs.kernel_toolchain }}-${{ inputs.kernel_version }}-
 
       - name: Compile the kernel [ ${{ inputs.kernel_version }} ]
-        uses: ophub/amlogic-s9xxx-armbian@main
+        uses: myaccount3/amlogic-s9xxx-armbian@main
         if: ${{ steps.mapped.outputs.status }} == 'success' && !cancelled()
         with:
           build_target: kernel
