@@ -235,10 +235,7 @@ on:
         description: "Set Armbian builder signature."
         required: false
         default: "ophub"
-        type: choice
-        options:
-          - ophub
-          - angel
+        type: string
 
 env:
   TZ: Etc/UTC
